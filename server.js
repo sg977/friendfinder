@@ -10,20 +10,27 @@ var path = require('path');
 var app = express();
 var PORT = process.env.PORT||8080;
 
-//expose the public directory to access CSS files 
+//expose the public directory to access CSS files and html files
 app.use(express.static(path.join(__dirname, './app/public')));
 
 //parsing incoming request bodies 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.text());
+//app.use(bodyParser.text());
 
 //add application routers
+//var __dirname = path.resolve(path.dirname(""));
+
 require(path.join(__dirname, './app/routing/apiRoutes'))(app);
 require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 
+//app.use(route1);
+//app.use(route2); 
+//testing
+//console.log(__dirname); 
+
 //start listening on PORT
 app.listen(PORT, function() {
-    console.log('Friend Finder app is listening on Port: ' + PORT);
+    console.log('Friend Finder app is listening on Port: http://localhost:' + PORT);
 
 });

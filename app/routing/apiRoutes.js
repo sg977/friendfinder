@@ -6,7 +6,8 @@
 var path = require('path');
 
 //import the list of friend entries 
-var friends = require("../data/friends.js");
+var friends = require("../data/friends");
+
 
 //export API routes 
 module.exports = function(app) {
@@ -19,7 +20,7 @@ module.exports = function(app) {
         //capture the user input object 
         var userInput = req.body;
         //testing
-        console.log('userInput = ' +JSON.stringify(userInput));
+        //console.log('userInput = ' +JSON.stringify(userInput));
         var userResponses = userInput.scores;
         //testing 
         console.log('userResponse = '+userResponses);
@@ -38,7 +39,7 @@ module.exports = function(app) {
                 diff += Math.abs(friends[i].scores[j] - userResponses[j]);
             }
             //testing
-            console.log('diff = ' + diff);
+            //console.log('diff = ' + diff);
 
             //if lowest difference, record the friend math 
             if (diff < totalDifference) {
