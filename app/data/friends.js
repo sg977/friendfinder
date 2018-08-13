@@ -21,7 +21,7 @@ var friendsArray = [
 	},
 	{
 		name: 'Sam',
-		photo: 'https://i.ytimg.com/vi/mRf3-JkwqfU/hqdefault.jpg',
+		photo: 'http://a57.foxnews.com/images.foxnews.com/content/fox-news/entertainment/2018/08/09/justin-bieber-explains-why-was-crying-with-fianc-e-hailey-baldwin/_jcr_content/par/featured_image/media-0.img.jpg/931/524/1533861166460.jpg?ve=1&tl=1&text=big-top-image',
 		scores: [
 			'2',
 			'4',
