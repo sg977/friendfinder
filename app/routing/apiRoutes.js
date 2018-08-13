@@ -54,8 +54,8 @@ module.exports = function(app) {
         //add new user 
         friends.push(userInput);
 
-        //send appropriate response 
-        res.json({status: 'OK', matchName:match, matchImage: matchImage});
+        //send response 
+        res.json({status: 'OK', matchName:matchName, matchImage: matchImage});
         
 
 
