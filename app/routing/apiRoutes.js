@@ -28,7 +28,7 @@ module.exports = function(app) {
         //compute best match 
         var matchName = '';
         var matchImage = '';
-        var totalDifference = 100;
+        var totalDifference = 1000;
 
         //examine all exisiting friend match 
         for (var i=0; i<friends.length; i++) {
@@ -41,7 +41,7 @@ module.exports = function(app) {
             //testing
             //console.log('diff = ' + diff);
 
-            //if lowest difference, record the friend math 
+            //if lowest difference, record the friend match
             if (diff < totalDifference) {
                 totalDifference = diff;
                 matchName = friends[i].name; 
